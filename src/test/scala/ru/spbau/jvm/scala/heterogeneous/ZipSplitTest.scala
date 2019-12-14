@@ -14,6 +14,10 @@ class ZipSplitTest extends FunSuite {
     assert(HNil == HNil.zip(nonEmptyList))
   }
 
+  test("zip HNil with HNil") {
+    assert(HNil == (HNil zip HNil))
+  }
+
   test("zip equal sized lists") {
     val firstList = 1 :: 2 :: HNil
     val secondList = "1" :: "2" :: HNil
